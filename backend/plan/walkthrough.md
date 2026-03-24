@@ -33,18 +33,23 @@ backend/
 ## 실행 방법
 
 ```bash
-# 1. 패키지 설치
+# 1. 가상 환경 생성 및 활성화 (Python 3.8+)
 cd backend
+python -m venv .venv
+source .venv/bin/activate
+
+# 2. 패키지 설치
+pip install --upgrade pip
 pip install -r requirements.txt
 
-# 2. 환경 설정
+# 3. 환경 설정
 cp .env.example .env
 # .env 파일에 API 키 입력
 
-# 3. 실행
-python3 update_all.py          # 전체 실행
-python3 update_all.py --quick  # AI 분석 제외
-python3 update_all.py --data-only  # 데이터 수집만
+# 4. 실행
+python update_all.py          # 전체 통합 파이프라인
+python update_all.py --quick  # AI 분석 제외 (기본 분석만)
+python update_all.py --data-only  # 데이터 수집만 실행
 ```
 
 ## 출력 파일
