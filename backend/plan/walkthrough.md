@@ -1,0 +1,66 @@
+# 미국주식분석 대시보드 — 백엔드 구현 완료
+
+## 생성된 파일 (16개)
+
+### 디렉토리 구조
+```
+backend/
+├── .env.example              # API 키 템플릿
+├── requirements.txt          # Python 패키지 의존성
+├── create_us_daily_prices.py # S&P 500 가격 수집
+├── analyze_volume.py         # 거래량/수급 분석
+├── analyze_13f.py            # 기관 보유 분석
+├── analyze_etf_flows.py      # ETF 자금 흐름
+├── smart_money_screener_v2.py# 6팩터 종합 스크리닝
+├── sector_heatmap.py         # 섹터 히트맵
+├── options_flow.py           # 옵션 플로우
+├── insider_tracker.py        # 인사이더 매매
+├── portfolio_risk.py         # 포트폴리오 리스크
+├── macro_analyzer.py         # 매크로 AI 분석
+├── ai_summary_generator.py   # 종목 AI 요약
+├── final_report_generator.py # 최종 Top 10 리포트
+├── economic_calendar.py      # 경제 캘린더
+└── update_all.py             # 전체 파이프라인
+```
+
+## 검증 결과
+
+| 검증 항목 | 결과 |
+|----------|------|
+| Python 구문 검증 (14개) | ✅ 14 OK, 0 FAIL |
+| 파일 생성 확인 | ✅ 16개 파일 정상 |
+
+## 실행 방법
+
+```bash
+# 1. 패키지 설치
+cd backend
+pip install -r requirements.txt
+
+# 2. 환경 설정
+cp .env.example .env
+# .env 파일에 API 키 입력
+
+# 3. 실행
+python3 update_all.py          # 전체 실행
+python3 update_all.py --quick  # AI 분석 제외
+python3 update_all.py --data-only  # 데이터 수집만
+```
+
+## 출력 파일
+
+| 스크립트 | 출력 |
+|---------|------|
+| create_us_daily_prices | `us_daily_prices.csv`, `us_stocks_list.csv` |
+| analyze_volume | `us_volume_analysis.csv` |
+| analyze_13f | `us_13f_holdings.csv` |
+| analyze_etf_flows | `us_etf_flows.csv`, `etf_flow_analysis.json` |
+| smart_money_screener_v2 | `smart_money_picks_v2.csv` |
+| sector_heatmap | `sector_heatmap.json` |
+| options_flow | `options_flow.json` |
+| insider_tracker | `insider_moves.json` |
+| portfolio_risk | `portfolio_risk.json` |
+| macro_analyzer | `macro_analysis.json`, `macro_analysis_en.json` |
+| ai_summary_generator | `ai_summaries.json` |
+| final_report_generator | `final_top10_report.json`, `smart_money_current.json` |
+| economic_calendar | `weekly_calendar.json` |
