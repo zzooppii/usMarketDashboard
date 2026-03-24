@@ -1,0 +1,56 @@
+# Documentation/AI prompt files (excluded by user request)
+PART1_Data_Collection.md
+PART2_Analysis_Screening.md
+PART3_AI_Analysis.md
+PART4_Web_Server.md
+PART5_Frontend_UI.md
+PART6_Frontend_Logic.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+ENV/
+env/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
