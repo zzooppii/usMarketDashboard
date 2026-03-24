@@ -6,6 +6,12 @@ PART4_Web_Server.md
 PART5_Frontend_UI.md
 PART6_Frontend_Logic.md
 
+# Generated data files (run scripts to regenerate)
+backend/data/
+# Keep data directory structure but ignore contents
+!backend/data/.gitkeep
+!backend/data/history/.gitkeep
+
 # OS files
 .DS_Store
 Thumbs.db
