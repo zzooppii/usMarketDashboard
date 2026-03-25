@@ -46,10 +46,14 @@ pip install -r requirements.txt
 cp .env.example .env
 # .env 파일에 API 키 입력
 
-# 4. 실행
+# 4. 데이터 수집/분석 파이프라인 실행
 python update_all.py          # 전체 통합 파이프라인
 python update_all.py --quick  # AI 분석 제외 (기본 분석만)
 python update_all.py --data-only  # 데이터 수집만 실행
+
+# 5. 프론트엔드 웹 대시보드 서버 실행
+python flask_app.py
+# 브라우저에서 http://localhost:5001 접속
 ```
 
 ## 출력 파일
