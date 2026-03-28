@@ -142,7 +142,7 @@ class USStockDailyPricesCreator:
         if os.path.exists(self.prices_file):
             logger.info(f"📂 Loading existing prices: {self.prices_file}")
             df = pd.read_csv(self.prices_file)
-            df['date'] = pd.to_datetime(df['date'])
+            df['date'] = pd.to_datetime(df['date'], utc=True)
             return df
         return pd.DataFrame()
     
