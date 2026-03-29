@@ -104,10 +104,6 @@ usMarketDashboard/
 ```bash
 cd backend
 
-# Python 3.9 이상 가상환경 생성
-python3 -m venv .venv
-source .venv/bin/activate
-
 pip install -r requirements.txt
 ```
 
@@ -131,24 +127,27 @@ FRED_API_KEY=your_fred_api_key        # 선택
 
 ```bash
 # 전체 파이프라인 실행 (최초 실행 또는 전체 업데이트)
-.venv/bin/python update_all.py
+python update_all.py
 
 # AI 분석 제외하고 빠르게 실행
-.venv/bin/python update_all.py --quick
+python update_all.py --quick
 
 # 데이터 수집만
-.venv/bin/python update_all.py --data-only
+python update_all.py --data-only
 
 # AI 분석만 (데이터가 이미 있을 때)
-.venv/bin/python update_all.py --ai-only
+python update_all.py --ai-only
 ```
 
 > 전체 파이프라인 소요 시간: 약 30~60분 (네트워크 상태에 따라 다름)
 
+- **가상 환경 활성화**: `source .venv/bin/activate` 명령으로 가상 환경을 활성화한 후 `python` 명령어를 사용하세요.
+
+
 ### 4. 서버 실행
 
 ```bash
-.venv/bin/python flask_app.py
+python flask_app.py
 ```
 
 브라우저에서 `http://localhost:5001` 접속
